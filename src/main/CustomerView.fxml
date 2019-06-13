@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="855.0" style="-fx-background-color: #0F2540;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CustomerViewController">
+   <children>
+      <AnchorPane fx:id="user_menu" layoutX="198.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="855.0" style="-fx-background-color: #e1e1ea;" styleClass="#FFFFFF" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="pn_changepw" layoutX="196.0" layoutY="-2.0" prefHeight="509.0" prefWidth="667.0" style="-fx-background-color: #BC9F77;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="135.0" layoutY="31.0" prefHeight="62.0" prefWidth="396.0" text="Please answer the security question below" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="security_ques" alignment="CENTER" layoutX="136.0" layoutY="87.0" prefHeight="39.0" prefWidth="396.0" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="securiry_ans" layoutX="137.0" layoutY="142.0" prefHeight="26.0" prefWidth="396.0" />
+                  <Button layoutX="139.0" layoutY="187.0" mnemonicParsing="false" onAction="#secureCheck" prefHeight="26.0" prefWidth="396.0" text="Enter" />
+                  <AnchorPane fx:id="ques_answered" layoutX="109.0" layoutY="244.0" minWidth="-Infinity" prefHeight="229.0" prefWidth="459.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutY="-7.0" prefHeight="69.0" prefWidth="459.0" text="Please enter your new password" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="19.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="firstTime" layoutX="100.0" layoutY="62.0" prefHeight="25.0" prefWidth="257.0" />
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="92.0" prefHeight="45.0" prefWidth="459.0" text="Please enter it for another time" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="19.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="secondTime" layoutX="100.0" layoutY="144.0" prefHeight="25.0" prefWidth="257.0" />
+                        <Button layoutX="100.0" layoutY="190.0" mnemonicParsing="false" onAction="#resetPassword" prefHeight="26.0" prefWidth="257.0" text="Reset password" textAlignment="CENTER" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Acc_canvas" layoutX="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="841.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="pn_cre" layoutX="188.0" layoutY="-3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="pn_cre1" layoutY="-2.0" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" layoutY="50.0" prefHeight="27.0" prefWidth="659.0" text="You currently have no credit account." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="pn_cre2" layoutX="5.0" layoutY="47.0" prefHeight="459.0" prefWidth="667.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="-1.0" layoutY="33.0" prefHeight="27.0" prefWidth="659.0" text="Please select an account." textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Gill Sans SemiBold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cre_overview" alignment="CENTER" layoutX="72.0" layoutY="120.0" prefHeight="339.0" prefWidth="531.0" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Gill Sans" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cre_accounts" layoutX="232.0" layoutY="65.0" prefHeight="27.0" prefWidth="194.0" />
+                                    <Label fx:id="credit_score_label" alignment="CENTER" layoutX="50.0" layoutY="3.0" prefHeight="27.0" prefWidth="100.0" text="Credit Score:" textAlignment="CENTER" visible="false">
+                                       <font>
+                                          <Font name="Gill Sans SemiBold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="credit_score" alignment="CENTER" layoutX="160.0" layoutY="3.0" prefHeight="27.0" prefWidth="67.0" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Gill Sans SemiBold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="619.0" layoutY="7.0" onMouseClicked="#showCreditCre" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@GUIImages/add.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="cre_cre" layoutY="319.0" prefHeight="185.0" prefWidth="673.0" style="-fx-background-color: #BDC0BA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button layoutX="45.0" layoutY="94.0" mnemonicParsing="false" onAction="#requestCredit" prefHeight="31.0" prefWidth="239.0" text="Request a new credit account" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="659.0" text="If you'd like to request a new joint credit account, please enter the other user's login below." textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="cre_joint" layoutX="180.0" layoutY="36.0" prefHeight="31.0" prefWidth="290.0" />
+                              <Button layoutX="330.0" layoutY="94.0" mnemonicParsing="false" onAction="#requestLineCredit" prefHeight="31.0" prefWidth="289.0" text="Request a new line of credit account" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pn_joi" layoutX="198.0" layoutY="-1.0" prefHeight="511.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <AnchorPane fx:id="pn_joi1" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;">
+                           <children>
+                              <Label alignment="CENTER" layoutY="50.0" prefHeight="27.0" prefWidth="659.0" text="You currently have no joint accounts." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_joi2" layoutY="36.0" prefHeight="511.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="26.0" prefHeight="27.0" prefWidth="659.0" text="Please choose an account." textAlignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="joint_overview" alignment="CENTER" layoutX="115.0" layoutY="96.0" prefHeight="284.0" prefWidth="412.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans" size="17.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="joint_accounts" layoutX="240.0" layoutY="56.0" prefHeight="27.0" prefWidth="194.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pn_default" layoutX="188.0" layoutY="-3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="87.0" layoutY="120.0" prefHeight="93.0" prefWidth="484.0" text="Please select one of the tabs on the left to proceed.">
+                           <font>
+                              <Font name="Helvetica Light" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="246.0" layoutY="260.0" prefHeight="31.0" prefWidth="167.0" text="Net Total:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Helvetica Light" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="net_total" alignment="CENTER" layoutX="87.0" layoutY="297.0" prefHeight="93.0" prefWidth="484.0" text="0.0" textAlignment="CENTER">
+                           <font>
+                              <Font name="Helvetica Light" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="102.0" prefHeight="35.0" prefWidth="44.0" text="Hello!" />
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pn_sto" layoutX="188.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="593.0" layoutY="14.0" onMouseClicked="#showStockCre" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUIImages/add.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="pn_sto1" layoutY="48.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;">
+                           <children>
+                              <Label alignment="CENTER" layoutY="50.0" prefHeight="27.0" prefWidth="659.0" text="You currently have no stock account." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sto_cre" layoutY="307.0" prefHeight="206.0" prefWidth="688.0" style="-fx-background-color: #BDC0BA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-9.0">
+                           <children>
+                              <Button layoutX="181.0" layoutY="149.0" mnemonicParsing="false" onAction="#requestStock" prefHeight="25.0" prefWidth="290.0" text="Request a new stock account" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="18.0" prefHeight="30.0" prefWidth="659.0" text="If you'd like to request a new joint stock account, please enter the other user's login below." textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sto_joint" layoutX="200.0" layoutY="54.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="290.0" />
+                              <Label alignment="CENTER" layoutX="140.0" layoutY="92.0" prefHeight="30.0" prefWidth="113.0" text="No. of stocks" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="num_stocks" layoutX="250.0" layoutY="92.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" />
+                              <TextField fx:id="ticker" layoutX="425.0" layoutY="92.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" />
+                              <Label alignment="CENTER" layoutX="310.0" layoutY="92.0" prefHeight="30.0" prefWidth="113.0" text="Ticker Symbol" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_sto2" layoutY="51.0" prefHeight="459.0" prefWidth="665.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="7.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="13.0" layoutY="16.0" prefHeight="27.0" prefWidth="659.0" text="Please select an account." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="sto_accounts" layoutX="243.0" layoutY="46.0" prefHeight="27.0" prefWidth="194.0" />
+                              <Label fx:id="sto_overview" alignment="CENTER" layoutX="71.0" layoutY="98.0" prefHeight="358.0" prefWidth="567.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pn_chq" layoutX="188.0" layoutY="-3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="665.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                         <Label alignment="CENTER" layoutX="247.0" layoutY="47.0" prefHeight="27.0" prefWidth="199.0" text="Please select an account." textAlignment="CENTER">
+                             <font>
+                                 <Font name="Gill Sans SemiBold" size="17.0" />
+                             </font>
+                         </Label>
+                         <ChoiceBox fx:id="chq_accounts" layoutX="249.0" layoutY="80.0" prefHeight="27.0" prefWidth="194.0" />
+                         <Label fx:id="chq_overview" alignment="CENTER" layoutX="32.0" layoutY="120.0" prefHeight="358.0" prefWidth="573.0" textAlignment="CENTER">
+                             <font>
+                                 <Font name="Gill Sans" size="17.0" />
+                             </font>
+                         </Label>
+                        <AnchorPane fx:id="chq_cre" layoutY="386.0" prefHeight="185.0" prefWidth="666.0" style="-fx-background-color: #BDC0BA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button layoutX="181.0" layoutY="82.0" mnemonicParsing="false" onAction="#requestChq" prefHeight="31.0" prefWidth="290.0" text="Request a new chequing account" AnchorPane.rightAnchor="195.0" />
+                              <Label alignment="CENTER" layoutX="7.0" layoutY="-1.0" prefHeight="30.0" prefWidth="659.0" text="If you'd like to request a new joint chequing account, please enter the other user's login below." textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="chq_joint" layoutX="180.0" layoutY="36.0" prefHeight="31.0" prefWidth="289.0" />
+                              <Button layoutX="251.0" layoutY="127.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#depositChq" prefHeight="31.0" prefWidth="150.0" text="Deposit" AnchorPane.rightAnchor="265.0" />
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="609.0" layoutY="16.0" onMouseClicked="#showChequingCre" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUIImages/add.png" />
+                           </image>
+                        </ImageView>
+                        <Accordion layoutX="32.0" layoutY="48.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pn_sav" layoutX="188.0" layoutY="-3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="pn_sav1" layoutY="56.0" prefHeight="271.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;">
+                           <children>
+                              <Label alignment="CENTER" layoutY="50.0" prefHeight="27.0" prefWidth="659.0" text="You currently have no savings accounts." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_sav2" prefHeight="326.0" prefWidth="659.0" style="-fx-background-color: #FCFAF2;">
+                           <children>
+                              <Label alignment="CENTER" layoutY="50.0" prefHeight="27.0" prefWidth="659.0" text="Please select an account." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sav_overview" alignment="CENTER" layoutX="31.0" layoutY="120.0" prefHeight="372.0" prefWidth="607.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans" size="17.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="sav_accounts" layoutX="230.0" layoutY="80.0" prefHeight="27.0" prefWidth="194.0" />
+                              <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="602.0" layoutY="19.0" onMouseClicked="#showSavingCre" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@GUIImages/add.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sav_cre" layoutX="1.0" layoutY="284.0" prefHeight="247.0" prefWidth="657.0" style="-fx-background-color: #BDC0BA;" visible="false" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="30.0" prefWidth="558.0" text="To create a time deposit for your savings account, please select a term length:" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="term_length" layoutX="471.0" layoutY="57.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="70.0" />
+                              <TextField fx:id="sav_joint" layoutX="161.0" layoutY="57.0" prefHeight="31.0" prefWidth="290.0" />
+                              <Button layoutX="161.0" layoutY="140.0" mnemonicParsing="false" onAction="#requestSav" prefHeight="30.0" prefWidth="290.0" text="Request a new savings account" />
+                              <Label alignment="CENTER" layoutX="-13.0" layoutY="16.0" prefHeight="30.0" prefWidth="659.0" text="If you'd like to request a new joint savings account, please enter the other user's login below." textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="242.0" layoutY="187.0" mnemonicParsing="false" onAction="#depositSav" prefHeight="31.0" prefWidth="128.0" text="Deposit" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_transaction" layoutX="196.0" prefHeight="509.0" prefWidth="659.0" style="-fx-background-color: #787878;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button layoutX="191.0" layoutY="160.0" mnemonicParsing="false" onAction="#toOtherAccount" prefHeight="45.0" prefWidth="277.0" text="To your other account">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="191.0" layoutY="245.0" mnemonicParsing="false" onAction="#toOtherUser" prefHeight="45.0" prefWidth="277.0" text="To another user">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane fx:id="pn_other_acc" layoutY="195.0" prefHeight="284.0" prefWidth="659.0" style="-fx-background-color: #3A3226;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="186.0" layoutY="32.0" prefHeight="45.0" prefWidth="87.0" text="Amount:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="186.0" layoutY="105.0" prefHeight="46.0" prefWidth="87.0" text="From:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="188.0" layoutY="187.0" text="To:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amount_accounts" layoutX="283.0" layoutY="42.0" prefHeight="26.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="user_accounts" layoutX="283.0" layoutY="115.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="other_accounts" layoutX="283.0" layoutY="183.0" prefWidth="150.0" />
+                        <Button layoutX="283.0" layoutY="232.0" mnemonicParsing="false" onAction="#transferSelf" prefHeight="27.0" prefWidth="150.0" text="Confirm" />
+                        <Button layoutX="185.0" layoutY="232.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="80.0" text="Cancel" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pn_other_user" layoutX="10.0" layoutY="125.0" prefHeight="284.0" prefWidth="659.0" style="-fx-background-color: #434343;" visible="false" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="186.0" layoutY="32.0" prefHeight="45.0" prefWidth="87.0" text="Amount:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="186.0" layoutY="96.0" prefHeight="46.0" prefWidth="87.0" text="From:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="186.0" layoutY="168.0" text="To:" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="283.0" layoutY="42.0" prefHeight="26.0" prefWidth="150.0" />
+                        <ChoiceBox layoutX="283.0" layoutY="106.0" prefWidth="150.0" />
+                        <TextField layoutX="283.0" layoutY="168.0" prefHeight="26.0" prefWidth="150.0" />
+                        <Label layoutX="168.0" layoutY="204.0" text="Please enter the recipient's username in the text field above" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="283.0" layoutY="236.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Confirm" />
+                        <Button layoutX="190.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Cancel" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Acc_btns" prefHeight="524.0" prefWidth="194.0" style="-fx-background-color: #0F2540;" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <Label layoutX="45.0" layoutY="39.0" text="Account Types" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_chq" layoutX="67.0" layoutY="79.0" mnemonicParsing="false" onAction="#showChequingAcc" prefHeight="31.0" prefWidth="113.0" text="Chequing" />
+            <Button fx:id="btn_sav" layoutX="66.0" layoutY="130.0" mnemonicParsing="false" onAction="#showSavingAcc" prefHeight="31.0" prefWidth="113.0" text=" Saving " />
+            <Button fx:id="btn_cre" layoutX="66.0" layoutY="180.0" mnemonicParsing="false" onAction="#showCreditAcc" prefHeight="31.0" prefWidth="113.0" text="Credit" />
+            <Button fx:id="btn_joi" layoutX="66.0" layoutY="230.0" mnemonicParsing="false" onAction="#showJointAcc" prefHeight="31.0" prefWidth="113.0" text="Joint" />
+            <Button fx:id="btn_sto" layoutX="66.0" layoutY="282.0" mnemonicParsing="false" onAction="#showStockAcc" prefHeight="30.0" prefWidth="113.0" text="Stock" />
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="20.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/007-bank-1%20white%20ver.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/004-money-1%20white%20ver.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/003-bank%20white%20ver.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/013-share.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/012-increasing-stocks-graphic-of-bars%20white%20ver.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff8a38" height="152.0" layoutX="-1.0" layoutY="373.0" stroke="#ff8a38" strokeType="INSIDE" width="200.0" />
+            <Button fx:id="btn_trans" layoutX="69.0" layoutY="389.0" mnemonicParsing="false" onAction="#toMakeTransaction" prefHeight="31.0" prefWidth="113.0" text="Make Transaction">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+            <Button fx:id="btn_pwchange" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" onAction="#toChangePassword" prefHeight="32.0" prefWidth="113.0" text="Change Password">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="20.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/key.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="19.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/transaction.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logout_btn" layoutX="69.0" layoutY="484.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="113.0" text="Logout" />
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="18.0" layoutY="486.0" onMouseClicked="#toDefaultMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/logout.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="67.0" layoutY="330.0" mnemonicParsing="false" onAction="#emergencyRestock" prefHeight="30.0" prefWidth="113.0" text="Urgent Restock">
+               <font>
+                  <Font size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="21.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GUIImages/emergent.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#061340" height="21.25" radius="12.3125" width="30.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

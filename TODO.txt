@@ -1,0 +1,28 @@
+# Required Added Functionality
++ All Debt accounts should have a maximum amount of debt you can incur. (Steffy) DONE
+
++ Add one more type of account (of your choice) that has at least one property that is different from existing accounts. Feel free to look at bank websites for ideas. (Justin) DONE
+
++ Add one more type of employee of the bank who has less access than the manager, but can also be a user with their own accounts. (Haiyi)
+
++ Make sure you can demo time-sensitive features, like adding interest to savings accounts each month. (Shiyu)
+
++ Improve the manager "undo" functionality. There is more than one way to interpret this statement.
+For example, you could have unlimited undo capability for the manager, or the ability to specify a number n so that the system undoes n transactions on an account,
+or you could have undo functionality for a user's previous n transactions (as opposed to an account's previous transactions). You can interpret this statement in any
+reasonable way that is as complex as the above suggestions. (Anqi)
+
++ Refactor so that you can have join accounts where two distinct users can both withdraw, deposit, and check the balance on the same account. (Shiyu) DONE
+
+# Added Complex Functionality
+
++ You could create a GUI with Java's swing package (JFrames, JPanels, etc.), with XML (there are Java XML tutorials online), make a more robust and feature-rich command line interface, or other sort of UI.
+
++ Locked Account Functionality
+
++ View all past transactions (can filter by online transactions)
+
++ Track and update on-line shopping history: collect the urls of each website and money spent there with input from the user or a file that simulates input from their browser, including
+unfinished purchases, returns, and other things that your program can remind the user about (if time permits)
+
++ Stocks Investing Functionality

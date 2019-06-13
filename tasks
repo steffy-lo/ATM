@@ -1,0 +1,33 @@
+207 Project
+===Account===
+Account
+- balance:
+    a total net balance of all accounts of this Customer
+OR
+    balances of individual accounts
+
+Inheritance or Composition:
+    - Asset subclass of Account or Account stores Asset
+    - Same question for the relationship btw Chequing and Asset
+
+creationDate
+    -String (yyyy-mm-dd) or Date
+
+Chequing.withdrawl:
+    - Chequing and Saving should keep track of their balance
+    individually (2 separate balance), but Asset should display
+    a total balance and Chequing balance
+OR
+    - Chequing and Saving together have one balance, stored in
+    Asset balance
+
+- Asset.deposit:
+    *Should it read lines from deposit.txt?
+OR
+    Should other class handle the txt file and just pass in
+    an int to Asset.deposit?
+
+    *Update the total balance of all accounts of this customer
+AND
+     Update the balance of the primary account (which should
+     always be a chequing account)

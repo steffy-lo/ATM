@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="509.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ManagerViewController">
+    <children>
+        <AnchorPane layoutX="-2.0" layoutY="75.0" prefHeight="509.0" prefWidth="855.0" style="-fx-background-color: #0F2540;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Button fx:id="logout_btn" layoutX="650.0" layoutY="430.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="139.0" text="Logout" />
+        <Label fx:id="manager_time" alignment="CENTER" layoutX="17.0" layoutY="425.0" prefHeight="45.0" prefWidth="308.0" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Gill Sans SemiBold" size="25.0" />
+            </font>
+        </Label>
+        <AnchorPane id="BankManagerGUI" prefHeight="77.0" prefWidth="856.0" style="-fx-background-color: #e1e1ea;">
+            <children>
+                <Button layoutX="63.0" layoutY="25.0" mnemonicParsing="false" onAction="#showRequests" styleClass="s" text="Customer Requests" />
+                <Button layoutX="473.0" layoutY="25.0" mnemonicParsing="false" onAction="#showUndoTransactions" prefHeight="27.0" prefWidth="139.0" text="Undo Transactions" />
+                <Button layoutX="678.0" layoutY="25.0" mnemonicParsing="false" onAction="#showMachineRestock" prefHeight="26.0" prefWidth="139.0" text="Restock" />
+                <Button alignment="CENTER" layoutX="270.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#manageDate" prefHeight="27.0" prefWidth="139.0" text="Set Date" textAlignment="CENTER" />
+                <AnchorPane fx:id="customerRequest" layoutX="-1.0" layoutY="77.0" prefHeight="409.0" prefWidth="956.0" style="-fx-background-color: #0F2540;" visible="false" AnchorPane.bottomAnchor="-322.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Label fx:id="requests_label" alignment="CENTER" layoutX="100.0" layoutY="20.0" prefHeight="30.0" prefWidth="651.0" textAlignment="CENTER" textFill="white">
+                            <font>
+                                <Font name="Helvetica Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="accept_btn" layoutX="250.0" layoutY="140.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="139" text="Create" visible="false" />
+                        <Button fx:id="reject_btn" layoutX="500.0" layoutY="140.0" onAction="#rejectAccount" prefHeight="27.0" prefWidth="139" text="Reject" visible="false" />
+                        <Label fx:id="decision_label" alignment="CENTER" layoutX="100.0" layoutY="60.0" prefHeight="30.0" prefWidth="651.0" textAlignment="CENTER" textFill="white" wrapText="true">
+                            <font>
+                                <Font name="Helvetica Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pass_label" alignment="CENTER" layoutX="100.0" layoutY="100.0" prefHeight="30.0" prefWidth="651.0" textAlignment="CENTER" textFill="white" wrapText="true">
+                            <font>
+                                <Font name="Helvetica Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="joint_label" alignment="CENTER" layoutX="100.0" layoutY="200.0" prefHeight="30.0" prefWidth="651.0" textAlignment="CENTER" textFill="white" wrapText="true">
+                            <font>
+                                <Font name="Helvetica Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="next_btn" layoutX="375.0" layoutY="250.0" mnemonicParsing="false" onAction="#showRequests" prefHeight="27.0" prefWidth="139.0" text="Next" visible="false" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="setDateTime" layoutX="-1.0" layoutY="77.0" prefHeight="409.0" prefWidth="956.0" style="-fx-background-color: #0F2540;" visible="false" AnchorPane.bottomAnchor="-322.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="27.0" prefWidth="651.0" text="Please set the date and time as you like" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="date_picker" layoutX="330.0" layoutY="90.0" prefHeight="27.0" prefWidth="194.0" />
+                        <ComboBox fx:id="hour_picker" layoutX="330.0" layoutY="130.0" prefHeight="31.0" prefWidth="74.0" />
+                        <ComboBox fx:id="minute_picker" layoutX="448.0" layoutY="130.0" prefHeight="31.0" prefWidth="76.0" />
+                        <Label alignment="CENTER" layoutX="416.0" layoutY="130.0" prefHeight="27.0" prefWidth="20.0" text=":" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="date_label" alignment="CENTER" layoutX="100.0" layoutY="180.0" prefHeight="27.0" prefWidth="651.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="440.0" layoutY="250.0" mnemonicParsing="false" onAction="#setDate" prefHeight="27.0" prefWidth="100.0" text="Set" />
+                        <Button layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#resetDate" prefHeight="27.0" prefWidth="100.0" text="Reset" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="undoTransaction" layoutX="-1.0" layoutY="77.0" prefHeight="409.0" prefWidth="956.0" style="-fx-background-color: #0F2540;" visible="false" AnchorPane.bottomAnchor="-322.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="27.0" prefWidth="651.0" text="Please provide the user login and press enter to search." textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="user_undo" layoutX="330.0" layoutY="70.0" onKeyPressed="#search" prefHeight="31.0" prefWidth="194.0" />
+                        <Label fx:id="undo_label" alignment="CENTER" layoutX="100.0" layoutY="110.0" prefHeight="55.0" prefWidth="651.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="user_accounts" layoutX="265.0" layoutY="170.0" prefHeight="31.0" prefWidth="183.0" visible="false" />
+                        <Label fx:id="undo_label2" alignment="CENTER" layoutX="100.0" layoutY="210.0" prefHeight="27.0" prefWidth="651.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans SemiBold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="undo_btn" layoutX="360.0" layoutY="250.0" mnemonicParsing="false" onAction="#undoTransactions" prefHeight="27.0" prefWidth="139.0" text="Undo" visible="false" />
+                  <ChoiceBox fx:id="num_transactions" layoutX="468.0" layoutY="170.0" prefHeight="31.0" prefWidth="48.0" visible="false" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="billRestock" layoutX="-1.0" layoutY="77.0" prefHeight="409.0" prefWidth="956.0" style="-fx-background-color: #0F2540;" visible="false" AnchorPane.bottomAnchor="-322.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="100.0" layoutY="20.0" prefHeight="20.0" prefWidth="651.0" text="Please enter the number of bills you would like to restock." textAlignment="CENTER" textFill="white">
+                            <font>
+                                <Font name="Helvetica Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="275.0" layoutY="50.0" prefHeight="30.0" prefWidth="90.0" text="\$5 bills:" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans" size="17.0" />
+                            </font></Label>
+                        <Label layoutX="275.0" layoutY="90.0" prefHeight="30.0" prefWidth="90.0" text="\$10 bills:" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="275.0" layoutY="130.0" prefHeight="30.0" prefWidth="90.0" text="\$20 bills:" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans" size="17.0" />
+                            </font></Label>
+                        <Label layoutX="275.0" layoutY="170.0" prefHeight="30.0" prefWidth="90.0" text="\$50 bills:" textFill="WHITE">
+                            <font>
+                                <Font name="Gill Sans" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="bill5" layoutX="366.0" layoutY="50.0" prefHeight="27.0" prefWidth="218.0" />
+                        <TextField fx:id="bill10" layoutX="366.0" layoutY="90.0" prefHeight="27.0" prefWidth="218.0" />
+                        <TextField fx:id="bill20" layoutX="366.0" layoutY="130.0" prefHeight="27.0" prefWidth="218.0" />
+                        <TextField fx:id="bill50" layoutX="366.0" layoutY="170.0" prefHeight="27.0" prefWidth="218.0" />
+                        <Label fx:id="restock_label" alignment="CENTER" layoutX="100.0" layoutY="220.0" prefHeight="20.0" prefWidth="651.0" textAlignment="CENTER" textFill="white" wrapText="true">
+                            <font>
+                                <Font name="Helvetica Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="375.0" layoutY="250.0" mnemonicParsing="false" onAction="#restockBills" prefHeight="27.0" prefWidth="139.0" text="Restock" />
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@GUIImages/request%20copy.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="422.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@GUIImages/bunny.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="47.0" fitWidth="41.0" layoutX="216.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@GUIImages/calendar.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="622.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@GUIImages/Restock%20copy.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

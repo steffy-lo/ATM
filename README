@@ -1,0 +1,30 @@
+Dependencies:
+The StockAccount will require two external dependencies to run correctly
+- yahoofinance
+- slf4j-simple
+
+General Instructions:
+
+To execute the full program, please ensure all classes are within the same directory, and run the main method from the
+GUIMain class.
+
+After running the main method from the GUIMain class, please first proceed as an administrator and type in a name
+and a password to create a BankManager account. The admin code will be:I love jellies(with the spaces in between the words)
+
+After doing so, you can log in as a bank manager to test out the bank manager interface.
+
+Alternatively, sign up as a new user to send a request to open an account, and log in as a bank manager to approve the
+account creation request. By default, a chequing account will be created along with the user account and the user can
+request to create more types of account when logging in the next time.
+
+If you wish to use the "Deposit money into your account" option, you must have an input file "deposits.txt" within the
+same directory. Each deposit occupies one line and is represented in the format "cash, DEPOSIT_AMOUNT". A sample
+deposits.txt is provided.
+
+If you wish to withdraw, please enter an amount that is a multiple of 5 in order to receive the exact amount. This is
+because only $50, $20, $10, and $5 bills exist in the atm machine.
+
+File paths:
+alerts.txt is in the Machine class constructor
+deposits.txt and outgoing.txt is in the Account class constructor
+requests.txt is in the initializer of the controller
