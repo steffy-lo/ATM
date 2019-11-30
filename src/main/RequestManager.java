@@ -11,7 +11,7 @@ import java.util.HashMap;
 /**
  * This class managers all activity of users before they logged in.
  */
-class RequestManager {
+class RequestManager implements Serializable{
     private static final String REQUEST_FILE = "requests.txt";
 
     private SystemManager systemManager;
